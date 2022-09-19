@@ -55,7 +55,7 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "264bb41d-0b6c-4e7e-9cd0-f60f06fde6a0"
+        "outputId": "7b58ace9-ede7-4e66-adeb-059b1f2b88a8"
       },
       "execution_count": null,
       "outputs": [
@@ -108,7 +108,7 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "10129095-ffd2-4e50-866b-5f7f53ca4bee"
+        "outputId": "dc7613b8-6687-46c9-8844-ae81d9adcdc7"
       },
       "execution_count": null,
       "outputs": [
@@ -121,6 +121,18 @@
           ]
         }
       ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google.colab import drive\n",
+        "drive.mount('/content/drive')"
+      ],
+      "metadata": {
+        "id": "IYBOudPWOeq-"
+      },
+      "execution_count": null,
+      "outputs": []
     },
     {
       "cell_type": "markdown",
@@ -152,7 +164,7 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "909fbc98-7c13-4a22-bf6a-ae6907831ceb"
+        "outputId": "714eaaea-36bb-476c-c7c0-f1876bef3711"
       },
       "execution_count": null,
       "outputs": [
@@ -198,7 +210,6 @@
     {
       "cell_type": "code",
       "source": [
-        "\n",
         "import numpy as np\n",
         "array=np.zeros(10)\n",
         "print(\"An array of 10 zeros:\")\n",
@@ -209,7 +220,7 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "23bfc9e8-612a-4718-f464-8d960484335d"
+        "outputId": "0888a485-caae-45a6-8469-428302009680"
       },
       "execution_count": null,
       "outputs": [
@@ -226,6 +237,7 @@
     {
       "cell_type": "code",
       "source": [
+        "\n",
         "import numpy as np\n",
         "array=np.ones(10)\n",
         "print(\"An array of 10 ones:\")\n",
@@ -236,7 +248,7 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "c15a47e1-54aa-47c2-fa90-182ef68cee31"
+        "outputId": "8e9f3408-6c94-478a-9df5-7fd8ccf2c3d6"
       },
       "execution_count": null,
       "outputs": [
@@ -262,7 +274,6 @@
     {
       "cell_type": "code",
       "source": [
-        "\n",
         "import numpy as np\n",
         "array=np.arange(20,36,2)\n",
         "print(\"Array of all the even integers from 30 to 70\")\n",
@@ -273,7 +284,7 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "c343d070-d886-4c40-9a13-4ceadf794569"
+        "outputId": "4ba0e2de-2a4d-4dc3-8147-05ecdf6b8a8a"
       },
       "execution_count": null,
       "outputs": [
@@ -299,9 +310,8 @@
     {
       "cell_type": "code",
       "source": [
-        "\n",
         "import numpy as np\n",
-        "x =  np.arange(2, 11).reshape(3,3)\n",
+        "x =  np.arange(0, 9).reshape(3,3)\n",
         "print(x)"
       ],
       "metadata": {
@@ -309,7 +319,7 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "b1db78a3-42c2-48a7-db3d-8149dbcf232a"
+        "outputId": "d085d0e1-0293-4d15-b888-6cd9e4903197"
       },
       "execution_count": null,
       "outputs": [
@@ -317,9 +327,9 @@
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "[[ 2  3  4]\n",
-            " [ 5  6  7]\n",
-            " [ 8  9 10]]\n"
+            "[[0 1 2]\n",
+            " [3 4 5]\n",
+            " [6 7 8]]\n"
           ]
         }
       ]
@@ -337,10 +347,11 @@
     {
       "cell_type": "code",
       "source": [
-        "\n",
         "import numpy as np\n",
         "a = np.array([1, 2, 3])\n",
+        "\n",
         "b = np.array([4, 5, 6])\n",
+        "\n",
         "np.concatenate((a, b))"
       ],
       "metadata": {
@@ -348,7 +359,7 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "5326aa47-ef1d-4a36-e5f1-bf7a35b52804"
+        "outputId": "0afc6a79-5dc7-4695-f4cf-c075fa79bf54"
       },
       "execution_count": null,
       "outputs": [
@@ -360,7 +371,7 @@
             ]
           },
           "metadata": {},
-          "execution_count": 19
+          "execution_count": 32
         }
       ]
     },
@@ -385,41 +396,314 @@
     {
       "cell_type": "code",
       "source": [
-        "import pandas as pd"
+        "import pandas as pd \n",
+        "data = [['tom', 10], ['nick', 15], ['juli', 14]] \n",
+        "df = pd.DataFrame(data,columns=['Name', 'Age'])  \n",
+        "# print dataframe. \n",
+        "df"
       ],
       "metadata": {
-        "id": "T5OxJRZ8uvR7"
+        "id": "T5OxJRZ8uvR7",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 143
+        },
+        "outputId": "6dfcf172-ef1b-42fd-d4f3-bad4db55e03a"
       },
       "execution_count": null,
-      "outputs": []
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "   Name  Age\n",
+              "0   tom   10\n",
+              "1  nick   15\n",
+              "2  juli   14"
+            ],
+            "text/html": [
+              "\n",
+              "  <div id=\"df-13d9549e-d7db-4fc0-9a1a-04b1e71ac4f5\">\n",
+              "    <div class=\"colab-df-container\">\n",
+              "      <div>\n",
+              "<style scoped>\n",
+              "    .dataframe tbody tr th:only-of-type {\n",
+              "        vertical-align: middle;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe tbody tr th {\n",
+              "        vertical-align: top;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe thead th {\n",
+              "        text-align: right;\n",
+              "    }\n",
+              "</style>\n",
+              "<table border=\"1\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr style=\"text-align: right;\">\n",
+              "      <th></th>\n",
+              "      <th>Name</th>\n",
+              "      <th>Age</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <th>0</th>\n",
+              "      <td>tom</td>\n",
+              "      <td>10</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>1</th>\n",
+              "      <td>nick</td>\n",
+              "      <td>15</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>2</th>\n",
+              "      <td>juli</td>\n",
+              "      <td>14</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n",
+              "</div>\n",
+              "      <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-13d9549e-d7db-4fc0-9a1a-04b1e71ac4f5')\"\n",
+              "              title=\"Convert this dataframe to an interactive table.\"\n",
+              "              style=\"display:none;\">\n",
+              "        \n",
+              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\"viewBox=\"0 0 24 24\"\n",
+              "       width=\"24px\">\n",
+              "    <path d=\"M0 0h24v24H0V0z\" fill=\"none\"/>\n",
+              "    <path d=\"M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z\"/><path d=\"M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z\"/>\n",
+              "  </svg>\n",
+              "      </button>\n",
+              "      \n",
+              "  <style>\n",
+              "    .colab-df-container {\n",
+              "      display:flex;\n",
+              "      flex-wrap:wrap;\n",
+              "      gap: 12px;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-convert {\n",
+              "      background-color: #E8F0FE;\n",
+              "      border: none;\n",
+              "      border-radius: 50%;\n",
+              "      cursor: pointer;\n",
+              "      display: none;\n",
+              "      fill: #1967D2;\n",
+              "      height: 32px;\n",
+              "      padding: 0 0 0 0;\n",
+              "      width: 32px;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-convert:hover {\n",
+              "      background-color: #E2EBFA;\n",
+              "      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
+              "      fill: #174EA6;\n",
+              "    }\n",
+              "\n",
+              "    [theme=dark] .colab-df-convert {\n",
+              "      background-color: #3B4455;\n",
+              "      fill: #D2E3FC;\n",
+              "    }\n",
+              "\n",
+              "    [theme=dark] .colab-df-convert:hover {\n",
+              "      background-color: #434B5C;\n",
+              "      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
+              "      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
+              "      fill: #FFFFFF;\n",
+              "    }\n",
+              "  </style>\n",
+              "\n",
+              "      <script>\n",
+              "        const buttonEl =\n",
+              "          document.querySelector('#df-13d9549e-d7db-4fc0-9a1a-04b1e71ac4f5 button.colab-df-convert');\n",
+              "        buttonEl.style.display =\n",
+              "          google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
+              "\n",
+              "        async function convertToInteractive(key) {\n",
+              "          const element = document.querySelector('#df-13d9549e-d7db-4fc0-9a1a-04b1e71ac4f5');\n",
+              "          const dataTable =\n",
+              "            await google.colab.kernel.invokeFunction('convertToInteractive',\n",
+              "                                                     [key], {});\n",
+              "          if (!dataTable) return;\n",
+              "\n",
+              "          const docLinkHtml = 'Like what you see? Visit the ' +\n",
+              "            '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'\n",
+              "            + ' to learn more about interactive tables.';\n",
+              "          element.innerHTML = '';\n",
+              "          dataTable['output_type'] = 'display_data';\n",
+              "          await google.colab.output.renderOutput(dataTable, element);\n",
+              "          const docLink = document.createElement('div');\n",
+              "          docLink.innerHTML = docLinkHtml;\n",
+              "          element.appendChild(docLink);\n",
+              "        }\n",
+              "      </script>\n",
+              "    </div>\n",
+              "  </div>\n",
+              "  "
+            ]
+          },
+          "metadata": {},
+          "execution_count": 62
+        }
+      ]
     },
     {
       "cell_type": "code",
       "source": [
         "\n",
-        "import pandas as pd\n",
-        "lists = [[1, 'aaa', 22], [2, 'bbb', 25], [3, 'ccc', 24]]\n",
-        "df=pd.DataFrame(lists, columns =['number','name','age'])\n",
-        "print(df )"
+        "import pandas as pd \n",
+        "data = [['tom', 10], ['nick', 15], ['juli', 14]] \n",
+        "# Create the pandas DataFrame \n",
+        "df = pd.DataFrame(data, columns=['Name', 'Age'])  \n",
+        "# print dataframe. \n",
+        "df"
       ],
       "metadata": {
-        "id": "xNpI_XXoYhs0",
         "colab": {
-          "base_uri": "https://localhost:8080/"
+          "base_uri": "https://localhost:8080/",
+          "height": 143
         },
-        "outputId": "d676f7c8-fbb8-4104-9e98-8707b4653036"
+        "id": "MLrduMFxGPGL",
+        "outputId": "31f42598-657f-4c69-ea8b-91b45ab0b383"
       },
       "execution_count": null,
       "outputs": [
         {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "   number name  age\n",
-            "0       1  aaa   22\n",
-            "1       2  bbb   25\n",
-            "2       3  ccc   24\n"
-          ]
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "   Name  Age\n",
+              "0   tom   10\n",
+              "1  nick   15\n",
+              "2  juli   14"
+            ],
+            "text/html": [
+              "\n",
+              "  <div id=\"df-f2dbc44a-5273-43a0-a8c1-004bd67e4faf\">\n",
+              "    <div class=\"colab-df-container\">\n",
+              "      <div>\n",
+              "<style scoped>\n",
+              "    .dataframe tbody tr th:only-of-type {\n",
+              "        vertical-align: middle;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe tbody tr th {\n",
+              "        vertical-align: top;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe thead th {\n",
+              "        text-align: right;\n",
+              "    }\n",
+              "</style>\n",
+              "<table border=\"1\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr style=\"text-align: right;\">\n",
+              "      <th></th>\n",
+              "      <th>Name</th>\n",
+              "      <th>Age</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <th>0</th>\n",
+              "      <td>tom</td>\n",
+              "      <td>10</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>1</th>\n",
+              "      <td>nick</td>\n",
+              "      <td>15</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>2</th>\n",
+              "      <td>juli</td>\n",
+              "      <td>14</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n",
+              "</div>\n",
+              "      <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-f2dbc44a-5273-43a0-a8c1-004bd67e4faf')\"\n",
+              "              title=\"Convert this dataframe to an interactive table.\"\n",
+              "              style=\"display:none;\">\n",
+              "        \n",
+              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\"viewBox=\"0 0 24 24\"\n",
+              "       width=\"24px\">\n",
+              "    <path d=\"M0 0h24v24H0V0z\" fill=\"none\"/>\n",
+              "    <path d=\"M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z\"/><path d=\"M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z\"/>\n",
+              "  </svg>\n",
+              "      </button>\n",
+              "      \n",
+              "  <style>\n",
+              "    .colab-df-container {\n",
+              "      display:flex;\n",
+              "      flex-wrap:wrap;\n",
+              "      gap: 12px;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-convert {\n",
+              "      background-color: #E8F0FE;\n",
+              "      border: none;\n",
+              "      border-radius: 50%;\n",
+              "      cursor: pointer;\n",
+              "      display: none;\n",
+              "      fill: #1967D2;\n",
+              "      height: 32px;\n",
+              "      padding: 0 0 0 0;\n",
+              "      width: 32px;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-convert:hover {\n",
+              "      background-color: #E2EBFA;\n",
+              "      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
+              "      fill: #174EA6;\n",
+              "    }\n",
+              "\n",
+              "    [theme=dark] .colab-df-convert {\n",
+              "      background-color: #3B4455;\n",
+              "      fill: #D2E3FC;\n",
+              "    }\n",
+              "\n",
+              "    [theme=dark] .colab-df-convert:hover {\n",
+              "      background-color: #434B5C;\n",
+              "      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
+              "      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
+              "      fill: #FFFFFF;\n",
+              "    }\n",
+              "  </style>\n",
+              "\n",
+              "      <script>\n",
+              "        const buttonEl =\n",
+              "          document.querySelector('#df-f2dbc44a-5273-43a0-a8c1-004bd67e4faf button.colab-df-convert');\n",
+              "        buttonEl.style.display =\n",
+              "          google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
+              "\n",
+              "        async function convertToInteractive(key) {\n",
+              "          const element = document.querySelector('#df-f2dbc44a-5273-43a0-a8c1-004bd67e4faf');\n",
+              "          const dataTable =\n",
+              "            await google.colab.kernel.invokeFunction('convertToInteractive',\n",
+              "                                                     [key], {});\n",
+              "          if (!dataTable) return;\n",
+              "\n",
+              "          const docLinkHtml = 'Like what you see? Visit the ' +\n",
+              "            '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'\n",
+              "            + ' to learn more about interactive tables.';\n",
+              "          element.innerHTML = '';\n",
+              "          dataTable['output_type'] = 'display_data';\n",
+              "          await google.colab.output.renderOutput(dataTable, element);\n",
+              "          const docLink = document.createElement('div');\n",
+              "          docLink.innerHTML = docLinkHtml;\n",
+              "          element.appendChild(docLink);\n",
+              "        }\n",
+              "      </script>\n",
+              "    </div>\n",
+              "  </div>\n",
+              "  "
+            ]
+          },
+          "metadata": {},
+          "execution_count": 64
         }
       ]
     },
@@ -439,15 +723,15 @@
         "import datetime\n",
         "\n",
         "import pandas as pd\n",
-        "\n",
+        " \n",
         "# initializing date\n",
         "\n",
         "test_date = datetime.datetime.strptime(\"01-1-2023\", \"%d-%m-%Y\")\n",
-        "\n",
+        " \n",
         "# initializing K \n",
         "\n",
         "K = 41\n",
-        "\n",
+        " \n",
         "\n",
         "date_generated = pd.date_range(test_date, periods=K)\n",
         "\n",
@@ -458,7 +742,7 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "ea4c70e6-c8d8-416c-9692-28dd561444b8"
+        "outputId": "9c989d5e-c31c-4f27-a121-9aa92244598e"
       },
       "execution_count": null,
       "outputs": [
@@ -496,13 +780,32 @@
     {
       "cell_type": "code",
       "source": [
-        "lists = [[1, 'aaa', 22], [2, 'bbb', 25], [3, 'ccc', 24]]"
+        "\n",
+        "import pandas as pd\n",
+        "lists = [[1, 'aaa', 22], [2, 'bbb', 25], [3, 'ccc', 24]]\n",
+        "df=pd.DataFrame(lists, columns =['number','name','age'])\n",
+        "print(df )"
       ],
       "metadata": {
-        "id": "_XMC8aEt0llB"
+        "id": "_XMC8aEt0llB",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b29ccb1a-ae86-4f7d-fb61-45e3e3941440"
       },
       "execution_count": null,
-      "outputs": []
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "   number name  age\n",
+            "0       1  aaa   22\n",
+            "1       2  bbb   25\n",
+            "2       3  ccc   24\n"
+          ]
+        }
+      ]
     },
     {
       "cell_type": "code",
@@ -517,7 +820,7 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "ff2ac128-3880-47fd-cd42-75dcf5dffc2f"
+        "outputId": "70f134b8-8c64-4e17-b01a-7891df11dad7"
       },
       "execution_count": null,
       "outputs": [
